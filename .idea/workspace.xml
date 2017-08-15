@@ -6,7 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9240ca-976a-4cdf-a879-015304aec397" name="Default" comment="" />
+    <list default="true" id="0a9240ca-976a-4cdf-a879-015304aec397" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webstore/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/webstore/controller/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webstore/domain/repository/ProductRepository.class" afterPath="$PROJECT_DIR$/target/classes/webstore/domain/repository/ProductRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webstore/domain/repository/impl/InMemoryProductRepository.class" afterPath="$PROJECT_DIR$/target/classes/webstore/domain/repository/impl/InMemoryProductRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webstore/service/ProductService.class" afterPath="$PROJECT_DIR$/target/classes/webstore/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webstore/service/impl/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/webstore/service/impl/ProductServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/controller/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/domain/repository/ProductRepository.class" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/domain/repository/ProductRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/domain/repository/impl/InMemoryProductRepository.class" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/domain/repository/impl/InMemoryProductRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/service/ProductService.class" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/service/impl/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/classes/webstore/service/impl/ProductServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/webstore/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/webstore/controller/ProductController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java" afterPath="$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java" afterPath="$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/DefaultServlet-servlet.xml" afterPath="$PROJECT_DIR$/target/webstore-1.0-SNAPSHOT/WEB-INF/DefaultServlet-servlet.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webstore/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="550">
+              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,11 +62,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DefaultServlet-servlet.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ProductRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+            <state relative-caret-position="162">
+              <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -55,9 +85,11 @@
       <file leaf-file-name="InMemoryProductRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="550">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="e#2890#2899#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +97,8 @@
       <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state relative-caret-position="144">
+              <caret line="12" column="77" lean-forward="false" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -85,8 +117,8 @@
       <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -103,6 +135,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -117,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/service/OrderService.java" />
@@ -133,9 +167,10 @@
         <option value="$PROJECT_DIR$/src/main/java/webstore/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/webstore/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml" />
       </list>
     </option>
   </component>
@@ -152,12 +187,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="57" />
-    <option name="y" value="52" />
-    <option name="width" value="653" />
-    <option name="height" value="736" />
+    <option name="y" value="24" />
+    <option name="width" value="655" />
+    <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -184,7 +220,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="SearchEverywhereHistoryKey" value="Cont&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;Prod&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/service/impl/ProductServiceImpl.java&#10;Service&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/service/impl/CustomerServiceImpl.java&#10;InMe&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java&#10;productRe&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/ProductRepository.java&#10;ProductCo&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;prod&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/webapp/WEB-INF/views/products.jsp&#10;inme&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java&#10;co&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;p&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/webapp/WEB-INF/views/products.jsp&#10;con&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java" />
+    <property name="SearchEverywhereHistoryKey" value="Defa&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml&#10;ProductCo&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;Impl&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/service/impl/ProductServiceImpl.java&#10;Service&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/service/ProductService.java&#10;InMe&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java&#10;ProductRe&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/ProductRepository.java&#10;Cont&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;Prod&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/service/impl/ProductServiceImpl.java&#10;productRe&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/ProductRepository.java&#10;prod&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/webapp/WEB-INF/views/products.jsp&#10;inme&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java&#10;co&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java&#10;p&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/webapp/WEB-INF/views/products.jsp&#10;con&#9;FILE&#9;file:///home/paul/IdeaProjects/webstore/src/main/java/webstore/controller/ProductController.java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -378,15 +414,15 @@
       <option name="presentableId" value="Default" />
       <updated>1502786240347</updated>
       <workItem from="1502786244415" duration="11286000" />
-      <workItem from="1502819621347" duration="1584000" />
+      <workItem from="1502819621347" duration="3577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12870000" />
+    <option name="totallyTimeSpent" value="14863000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="52" width="653" height="736" extended-state="0" />
+    <frame x="57" y="24" width="655" height="744" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -406,10 +442,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9509494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9498433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48238897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -453,13 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -565,30 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/impl/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -597,21 +602,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/domain/repository/impl/InMemoryProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#2890#2899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="77" lean-forward="false" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/webstore/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/webstore/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="550">
+          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DefaultServlet-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
