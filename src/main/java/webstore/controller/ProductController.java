@@ -34,4 +34,4 @@ public class ProductController {
         model.addAttribute("products", productService.getProductsByCategory(productCatetgory));
         return "products";
     }
-}\
+}
