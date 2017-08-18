@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import webstore.domain.Product;
 import webstore.domain.repository.ProductRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -31,7 +32,22 @@ public class ProductServiceImpl implements webstore.service.ProductService {
     }
 
     @Override
+    public List<Product> getProductByManufacturer(String manufacturer) {
+        return productRepository.getProductsByManufacturer(manufacturer);
+    }
+
+    @Override
     public Product getProductById(String productId) {
         return productRepository.getProductById(productId);
     }
+
+    @Override
+    public Set<Product> getProductsByPriceFilter(Map<String, String> prices) {
+        return productRepository.getProductsByPriceFilter(prices);
+    }
+
+//    @Override
+//    public List<Product> getProductByMultipleCriteria(String productCategory, String price, String manufacturer) {
+//        return productRepository.getProductByMultipleCriteria(productCategory, price, manufacturer);
+//    }
 }

@@ -8,10 +8,14 @@ import org.springframework.web.bind.annotation.MatrixVariable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import webstore.domain.Product;
 import webstore.service.ProductService;
 
+import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/products")
@@ -28,30 +32,58 @@ public class ProductController {
         return "products";
     }
 
-    @RequestMapping ("/all")
-    public String allProducts(Model model){
+    @RequestMapping("/all")
+    public String allProducts(Model model) {
         model.addAttribute("products", productService.getAllProducts());
         return "products";
     }
 
     @RequestMapping("/{category}")
-    public String getProductByCategory(Model model, @PathVariable("category")String productCatetgory) {
+    public String getProductByCategory(Model model, @PathVariable("category") String productCatetgory) {
         model.addAttribute("products", productService.getProductsByCategory(productCatetgory));
         return "products";
     }
 
-    @RequestMapping ("/filter/{ByCriteria}")
-    public String getProductsByCriteria(@MatrixVariable(pathVar = "ByCriteria")Map<String, List<String>> filterParams,
+    @RequestMapping("/filter/{ByCriteria}")
+    public String getProductsByCriteria(@MatrixVariable(pathVar = "ByCriteria") Map<String, List<String>> filterParams,
                                         Model model) {
         model.addAttribute("products", productService.getProductsByFilter(filterParams));
         return "products";
     }
 
-    @RequestMapping ("/product")
-    public String getProductById(@RequestParam("id")String productId, Model model) {
+    @RequestMapping("/product")
+    public String getProductById(@RequestParam("id") String productId, Model model) {
         model.addAttribute("product", productService.getProductById(productId));
 
         return "product";
     }
 
+    @RequestMapping("/{category}/{prices}")
+    public String getProductByMultipleCriteria(@PathVariable("category")String category,
+                                               @MatrixVariable(pathVar = "prices")Map<String, String> prices,
+                                               @RequestParam("manufacturer")String man,
+                                               Model model) {
+        List<Product> byCategory = productService.getProductsByCategory(category);
+        List<Product> byManufacturer = productService.getProductByManufacturer(man);
+
+        Set<Product> pries = productService.getProductsByPriceFilter(prices);
+
+        Set<Product> finProducts = new HashSet<>();
+        finProducts.addAll(byCategory);
+        finProducts.addAll(byManufacturer);
+        finProducts.addAll(pries);
+
+        model.addAttribute("products", finProducts);
+
+        return "products";
+    }
+//    @RequestMapping ("/{category}/{price}manufacturer")
+//    public String getProductByMultipleCriteria(Model model,
+//                                               @PathVariable("category")String productCategory,
+//                                               @MatrixVariable(pathVar = "price")String price,
+//                                               @RequestParam("manufacturer")String manufacturer) {
+//        model.addAttribute("product", productService.getProductByMultipleCriteria(productCategory, price, manufacturer));
+//
+//        return "product";
+//    }
 }
