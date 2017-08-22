@@ -1,17 +1,12 @@
 package webstore.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.MatrixVariable;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import webstore.domain.Product;
 import webstore.service.ProductService;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -77,13 +72,15 @@ public class ProductController {
 
         return "products";
     }
-//    @RequestMapping ("/{category}/{price}manufacturer")
-//    public String getProductByMultipleCriteria(Model model,
-//                                               @PathVariable("category")String productCategory,
-//                                               @MatrixVariable(pathVar = "price")String price,
-//                                               @RequestParam("manufacturer")String manufacturer) {
-//        model.addAttribute("product", productService.getProductByMultipleCriteria(productCategory, price, manufacturer));
-//
-//        return "product";
-//    }
+
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public String getAddNewProductFrom(@ModelAttribute("newProduct") Product newProduct) {
+        return "addProduct";
+    }
+
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String processAddNewProductFrom(@ModelAttribute("newProduct") Product newProduct) {
+        productService.addProduct(newProduct);
+        return "redirect:/products";
+    }
 }

@@ -46,8 +46,9 @@ public class ProductServiceImpl implements webstore.service.ProductService {
         return productRepository.getProductsByPriceFilter(prices);
     }
 
-//    @Override
-//    public List<Product> getProductByMultipleCriteria(String productCategory, String price, String manufacturer) {
-//        return productRepository.getProductByMultipleCriteria(productCategory, price, manufacturer);
-//    }
+    @Override
+    public void addProduct(Product product) {
+        productRepository.addProduct(product);
+    }
+
 }

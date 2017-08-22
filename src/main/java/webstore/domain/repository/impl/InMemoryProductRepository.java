@@ -63,38 +63,27 @@ public class InMemoryProductRepository implements ProductRepository {
 
     @Override
     public Set<Product> getProductsByPriceFilter(Map<String, String> prices) {
-        prices.keySet().forEach(System.out::println);
 
-        Set<Product> result = new HashSet<>();
-
-            result.addAll(listOfProducts.stream()
+        return (listOfProducts.stream()
                     .filter(product ->BigDecimal.valueOf(Integer.valueOf(prices.get("low"))).compareTo(product.getUnitPrice()) < 0)
-                    .collect(Collectors.toList()));
-
-            result.removeAll(listOfProducts.stream()
-                .filter(product ->BigDecimal.valueOf(Integer.valueOf(prices.get("high"))).compareTo(product.getUnitPrice()) < 0)
-                .collect(Collectors.toList()));
-
-            return result;
+                    .filter(product ->BigDecimal.valueOf(Integer.valueOf(prices.get("high"))).compareTo(product.getUnitPrice()) > 0)
+                    .collect(Collectors.toSet()));
     }
 
     @Override
     public List<Product> getProductCategory(String category) {
-        List<Product> productsByCategory = new ArrayList<>();
-        for (Product product : listOfProducts) {
-            if (category.equalsIgnoreCase(product.getCategory())){
-                productsByCategory.add(product);
-            }
-        }
-        return productsByCategory;
+
+        return listOfProducts.stream()
+                .filter(product ->category.equalsIgnoreCase(product.getCategory()))
+                .collect(Collectors.toList());
     }
 
     @Override
     public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
         Set<Product> productsByBrand = new HashSet<>();
         Set<Product> productsByCategory = new HashSet<Product>();
-        Set<String> criterias = filterParams.keySet();
-        if (criterias.contains("brand")) {
+        Set<String> criteria = filterParams.keySet();
+        if (criteria.contains("brand")) {
             for (String brandName : filterParams.get("brand")) {
                 for (Product product : listOfProducts) {
                     if (brandName.equalsIgnoreCase(product.getManufacturer())) {
@@ -103,7 +92,7 @@ public class InMemoryProductRepository implements ProductRepository {
                 }
             }
         }
-        if(criterias.contains("category")) {
+        if(criteria.contains("category")) {
             for(String category: filterParams.get("category")) {
                 productsByCategory.addAll(this.getProductCategory(category));
             }
@@ -114,17 +103,16 @@ public class InMemoryProductRepository implements ProductRepository {
 
     @Override
     public List<Product> getProductsByManufacturer(String manufacturer) {
+
         return listOfProducts.stream()
                 .filter(product -> manufacturer.equalsIgnoreCase(product.getManufacturer()))
                 .collect(Collectors.toList());
     }
-//
-//    @Override
-//    public List<Product> getProductByMultipleCriteria(String productCategory, String price, String manufacturer) {
-//
-//        return listOfProducts.stream()
-//                .filter(product -> productCategory.equalsIgnoreCase(product.getCategory()))
-//                .filter(product -> manufacturer.equalsIgnoreCase(product.getManufacturer()))
-//                .collect(Collectors.toList());
-//    }
+
+    // add data from form and input
+
+    @Override
+    public void addProduct(Product product) {
+        listOfProducts.add(product);
+    }
 }
