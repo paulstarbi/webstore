@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html>
@@ -12,6 +13,10 @@
 <body>
 <section>
     <div class="jumbotron">
+        <a href="<c:url value="/j_spring_security_logout" />"
+        class="btn btn-danger btn-mini pull-right">
+    Wyloguj się
+    </a>
         <div class="container">
             <h1>Produkty</h1>
             <p>Dodaj produkty</p>
@@ -25,53 +30,53 @@
             <legend>Dodaj nowy produkt</legend>
             <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="productId">
-                    Id produktu</label>
+                    <spring:message code="addProduct.from.productId.label" />
+                </label>
                 <div class="col-lg-10">
-                    <form:input id="productId" path="productId" type="text"
+                    <form:input id="productId" path="productId"
                                 class="form:input-large"/>
                 </div>
             </div>
 
              <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="name">
-                    Nazwa produktu</label>
+                    <spring:message code="addProduct.from.productName.label" />
+                </label>
                  <div class="col-lg-10">
-                     <form:input id="name" path="name" type="text" />
+                     <form:input id="name" path="name" />
                  </div>
              </div>
              <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="cena">
-                    Cena sztuki</label>
+                    <spring:message code="addProduct.from.productUnitPrice.label"/>
+                </label>
                  <div class="col-lg-10">
                      <form:input id="cena" path="unitPrice"/>
                  </div>
              </div>
              <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="manufacturer">
-                    Producent</label>
+                    <spring:message code="addProduct.from.manufacturer.label"/>
+                </label>
                  <div class="col-lg-10">
-                     <form:input id="manufacturer" path="manufacturer" type="text" />
+                     <form:input id="manufacturer" path="manufacturer" />
                  </div>
              </div>
             <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="category">
-                    Kategoria</label>
+                    <spring:message code="addProduct.from.category.label"/>
+                </label>
                 <div class="col-lg-10">
-                    <form:input id="category" path="category" type="text" />
+                    <form:input id="category" path="category" />
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="iloscmag">
-                    Ilosc produktow w magazynie</label>
+                    <spring:message code="addProduct.from.unitInStock.label"/>
+                </label>
                 <div class="col-lg-10">
-                    <form:input id="iloscmag" path="unitsInStock" class="form:input-large"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-lg-2 col-lg-2" for="order">
-                    Ilosc zamowionych produktow</label>
-                <div class="col-lg-10">
-                    <form:input id="order" path="unitsInOrder" class="form:input-large"/>
+                    <form:input id="iloscmag" path="unitsInStock"
+                                class="form:input-large"/>
                 </div>
             </div>
             <div class="form-group">
@@ -81,12 +86,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="control-label col-lg-2" for="discontinued">Wycofany</label>
-                <div class="col-lg-10">
-                    <form:checkbox id="discontinued" path="discontinued"/>
-                </div>
-            </div>
             <div class="form-group">
                 <%--@declare id="condition"--%><label class="control-label col-lg-2"
                                                       for="condition">Stan</label>

@@ -3,6 +3,9 @@ package webstore.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import webstore.domain.Product;
 import webstore.service.ProductService;
@@ -79,8 +82,18 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String processAddNewProductFrom(@ModelAttribute("newProduct") Product newProduct) {
+    public String processAddNewProductFrom(@ModelAttribute("newProduct") Product newProduct,
+                                           BindingResult result) {
+        String[] suppressedFields = result.getSuppressedFields();
+        if (suppressedFields.length > 0) {
+            throw new RuntimeException("Próba wiazania niedozwolonych pól"
+                    + StringUtils.arrayToCommaDelimitedString(suppressedFields));
+        }
         productService.addProduct(newProduct);
         return "redirect:/products";
+    }
+    @InitBinder
+    public void initialiseBinder(WebDataBinder binder) {
+        binder.setDisallowedFields("unitsInOrder", "discontinued");
     }
 }
