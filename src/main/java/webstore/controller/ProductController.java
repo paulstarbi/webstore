@@ -7,9 +7,12 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import webstore.domain.Product;
 import webstore.service.ProductService;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -63,7 +66,6 @@ public class ProductController {
                                                Model model) {
         List<Product> byCategory = productService.getProductsByCategory(category);
         List<Product> byManufacturer = productService.getProductByManufacturer(man);
-
         Set<Product> pries = productService.getProductsByPriceFilter(prices);
 
         Set<Product> finProducts = new HashSet<>();
@@ -83,17 +85,42 @@ public class ProductController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String processAddNewProductFrom(@ModelAttribute("newProduct") Product newProduct,
-                                           BindingResult result) {
+                                           BindingResult result, HttpServletRequest request) {
         String[] suppressedFields = result.getSuppressedFields();
         if (suppressedFields.length > 0) {
-            throw new RuntimeException("Próba wiazania niedozwolonych pól"
+            throw new RuntimeException("Próba wiazania niedozwolonych pól "
                     + StringUtils.arrayToCommaDelimitedString(suppressedFields));
         }
+//      CommonsMultipartResolver określa, czy zawartość żądania jest prosta czy złożona (zawiera również pliki)
+        MultipartFile productimage = newProduct.getProductImage();
+        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+        if (productimage != null && !productimage.isEmpty()) {
+            try {
+                productimage.transferTo(new File(rootDirectory+"resources/images/" +
+                newProduct.getProductId()+ ".png"));
+            } catch (Exception e) {
+                throw new RuntimeException("Niepowodzenie podczas proby zapisu obrazka produktu", e);
+            }
+        }
+        MultipartFile productInstruction = newProduct.getProductInstruction();
+
+        if (productInstruction != null && !productInstruction.isEmpty()) {
+            try {
+                productInstruction.transferTo(new File(rootDirectory+"resources/pdf/" +
+                        newProduct.getProductId()+ ".pdf"));
+            } catch (Exception e) {
+                throw new RuntimeException("Niepowodzenie podczas proby zapisu instrukcji produktu", e);
+            }
+        }
+//
         productService.addProduct(newProduct);
         return "redirect:/products";
     }
+
     @InitBinder
     public void initialiseBinder(WebDataBinder binder) {
         binder.setDisallowedFields("unitsInOrder", "discontinued");
+        binder.setAllowedFields("productId", "name", "unitPrice", "description",
+                "manufacturer", "category", "unitsInStock", "productImage", "productInstruction","condition");
     }
 }

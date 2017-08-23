@@ -10,7 +10,8 @@
 
     <mvc:annotation-driven enable-matrix-variables="true"/>
     <context:component-scan base-package="webstore" />
-    <mvc:resources  mapping="/resource/**" location="/"/>
+    <!--resource static like images -->
+    <mvc:resources location="resources/" mapping="/resource/**" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/" />
@@ -21,7 +22,7 @@
         <property name="basename" value="messages"/>
     </bean>
 
-
+    <!--resolver to loading images from url and saving in files-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="10240000"/>
     </bean>

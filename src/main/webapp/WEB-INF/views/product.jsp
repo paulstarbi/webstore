@@ -18,6 +18,11 @@
 <section class="container">
     <div class="row">
         <div class="col-md-5">
+            <img src="<c:url value="/resource/images/${product.productId}.png"></c:url> "
+                 alt="image" style="width: 80%" />
+
+        </div>
+        <div class="col-md-5">
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <p>
@@ -28,6 +33,12 @@
             </p>
             <p>
                 <strong>Kategoria</strong>: ${product.category}
+            </p>
+            <p>
+                <a href="<c:url value="/resource/pdf/${product.productId}.pdf"></c:url>" >
+                    <strong>Instrukcja</strong>
+                </a>
+
             </p>
             <p>
                 <strong>Dostępna liczba sztuk

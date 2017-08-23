@@ -25,19 +25,20 @@
 </section>
 
 <section class="container">
-    <form:form modelAttribute="newProduct" class="form-horizontal">
+    <form:form modelAttribute="newProduct" class="form-horizontal"
+    enctype="multipart/form-data">
         <fieldset>
             <legend>Dodaj nowy produkt</legend>
             <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="productId">
                     <spring:message code="addProduct.from.productId.label" />
                 </label>
+
                 <div class="col-lg-10">
                     <form:input id="productId" path="productId"
                                 class="form:input-large"/>
                 </div>
             </div>
-
              <div class="form-group">
                 <label class="control-label col-lg-2 col-lg-2" for="name">
                     <spring:message code="addProduct.from.productName.label" />
@@ -87,14 +88,33 @@
             </div>
 
             <div class="form-group">
-                <%--@declare id="condition"--%><label class="control-label col-lg-2"
-                                                      for="condition">Stan</label>
+                <%--@declare id="condition"--%>
+                    <label class="control-label col-lg-2"for="condition">Stan</label>
                 <div class="col-lg-10">
                     <form:radiobutton path="condition" value="New"/>Nowy
                     <form:radiobutton path="condition" value="Old"/>Używany
                     <form:radiobutton path="condition" value="Refurbished"/>Odnowiony
                 </div>
             </div>
+            <%--image add--%>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="productImage">
+                    <spring:message code="addProdcut.form.productImage.label"/>
+                </label>
+                     <div class="col-lg-10">
+                        <form:input id="productImage" path="productImage" type="file" class="form:input-large" />
+                    </div>
+                </div>
+            <%--pdf add--%>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="productImage">
+                    <spring:message code="addProdcut.form.productInstruction.label"/>
+                </label>
+                <div class="col-lg-10">
+                    <form:input id="productInstruction" path="productInstruction" type="file" class="form:input-large" />
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <input type="submit" id="btnAdd" class="btn btn-primary"
